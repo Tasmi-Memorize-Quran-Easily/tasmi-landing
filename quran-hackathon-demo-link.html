@@ -114,7 +114,7 @@
           .then(function (result) {
             if (result.ok) {
               status.className = 'form-status is-success';
-              status.innerHTML = 'Jazakallahu khairan — your request has been received. We&rsquo;ll send the TestFlight invite to the email you provided shortly.';
+              status.innerHTML = 'Jazakallahu khairan, your request has been received. We&rsquo;ll send the TestFlight invite to the email you provided shortly.';
               form.reset();
             } else {
               throw new Error((result.body && result.body.message) || 'Submission failed');
