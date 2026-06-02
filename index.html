@@ -3,72 +3,541 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tasmi: A Quran memorization companion</title>
+  <title>Tasmi | A Quran memorization companion</title>
   <meta name="description" content="Tasmi is a Quran memorization companion app for iOS. Build a memorization habit that lasts beyond Ramadan.">
+  <meta property="og:title" content="Tasmi | A Quran memorization companion">
+  <meta property="og:description" content="Build a Quran memorization habit that lasts beyond Ramadan.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="logo.png">
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="apple-touch-icon" href="logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <main>
-    <header class="header">
-      <img src="logo.png" alt="Tasmi app icon" width="64" height="64">
-      <div class="header-text">
-        <h1>Tasmi</h1>
-        <span class="arabic" lang="ar" dir="rtl">تسميع</span>
+<body class="landing">
+
+  <!-- 1. NAV -->
+  <nav class="site-nav" id="siteNav" aria-label="Primary">
+    <div class="nav-inner">
+      <button class="nav-toggle" aria-controls="navMenu" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navMenu">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#updates">Updates</a></li>
+      </ul>
+      <a class="nav-brand" href="/" aria-label="Tasmi home">
+        <img src="logo.png" alt="" width="36" height="36">
+        <span>Tasmi</span>
+      </a>
+      <div class="nav-cta">
+        <a href="https://apps.apple.com/us/app/tasmi/id6770039955" class="btn btn-accent" target="_blank" rel="noopener">Get the App</a>
       </div>
-    </header>
+    </div>
+  </nav>
 
-    <p class="tagline">A Quran memorization companion.</p>
+  <!-- 2. HERO -->
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">
+        <span>Built for the Quran Foundation Hackathon</span>
+        <img src="badges/quran-hackathon.png" alt="" width="28" height="28" loading="lazy">
+      </p>
+      <h1>
+        The <span class="rotator" aria-live="polite"><span class="rotator-word">quiet</span></span> Quran<br>
+        memorization companion
+      </h1>
+      <p class="lead">
+        Tasmi helps you build a memorization habit that lasts beyond Ramadan.
+        A structured review system, in a calm, focused space.
+      </p>
+      <div class="hero-cta">
+        <span class="hero-cta-label">Available on</span>
+        <div class="hero-cta-badges">
+          <a href="https://apps.apple.com/us/app/tasmi/id6770039955" class="btn btn-store" target="_blank" rel="noopener">
+            <svg class="btn-icon" viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+            <span class="btn-label">
+              <span class="btn-small">Download on the</span>
+              <span class="btn-big">App Store</span>
+            </span>
+          </a>
+        </div>
+      </div>
 
-    <article>
-      <p>Tasmi helps you build a Quran memorization habit that lasts beyond Ramadan.</p>
+      <div class="seven-steps">
+        <div class="seven-steps-head">
+          <h4 class="kicker">HOW IT WORKS</h4>
+          <h3>Memorise in seven steps</h3>
+        </div>
 
-      <p>The name comes from the traditional practice of <em>tasmi&rsquo;</em>, reciting what you&rsquo;ve memorized to a teacher for review. Tasmi brings that discipline into a daily companion: a structured review system that takes new portions from first reading through long-term retention, so what you memorize stays with you.</p>
+        <div class="step-track" role="tablist" aria-label="Memorization steps">
+          <button class="step-btn is-active" type="button" role="tab" data-step="1" aria-selected="true">
+            <span class="step-num">1</span>
+            <span class="step-name">Pick a Surah</span>
+          </button>
+          <button class="step-btn" type="button" role="tab" data-step="2" aria-selected="false">
+            <span class="step-num">2</span>
+            <span class="step-name">Select Template</span>
+          </button>
+          <button class="step-btn" type="button" role="tab" data-step="3" aria-selected="false">
+            <span class="step-num">3</span>
+            <span class="step-name">Create Challenge</span>
+          </button>
+          <button class="step-btn" type="button" role="tab" data-step="4" aria-selected="false">
+            <span class="step-num">4</span>
+            <span class="step-name">Drills</span>
+          </button>
+          <button class="step-btn" type="button" role="tab" data-step="5" aria-selected="false">
+            <span class="step-num">5</span>
+            <span class="step-name">More Drills</span>
+          </button>
+          <button class="step-btn" type="button" role="tab" data-step="6" aria-selected="false">
+            <span class="step-num">6</span>
+            <span class="step-name">Review Progress</span>
+          </button>
+          <button class="step-btn" type="button" role="tab" data-step="7" aria-selected="false">
+            <span class="step-num">7</span>
+            <span class="step-name">Revise</span>
+          </button>
+        </div>
 
-      <p>Built for the <a href="https://launch.provisioncapital.com/quran-hackathon">Quran Foundation Hackathon</a>, Ramadan 2026.</p>
+        <div class="step-stage">
+          <img class="step-image is-active" src="screens/01-range.jpg"       alt="Step 1: Pick a small range to memorize" data-step="1">
+          <img class="step-image" src="screens/02-template.jpg"    alt="Step 2: Choose a memorization template"  data-step="2" loading="lazy">
+          <img class="step-image" src="screens/03-challenges.jpg"  alt="Step 3: Interactive challenges"          data-step="3" loading="lazy">
+          <img class="step-image" src="screens/04-drills.jpg"      alt="Step 4: Word-by-word drills"             data-step="4" loading="lazy">
+          <img class="step-image" src="screens/05-transitions.jpg" alt="Step 5: Sharpen transitions between ayahs" data-step="5" loading="lazy">
+          <img class="step-image" src="screens/06-journey.jpg"     alt="Step 6: Watch your hifz grow"            data-step="6" loading="lazy">
+          <img class="step-image" src="screens/07-review.jpg"      alt="Step 7: Tap-to-reveal flashcards"        data-step="7" loading="lazy">
+        </div>
+      </div>
 
-      <h2>Download</h2>
-      <p>Tasmi is available now on the App Store for iPhone.</p>
-      <p>
-        <a href="https://apps.apple.com/us/app/tasmi/id6770039955" class="btn btn-apple" target="_blank" rel="noopener">
+      <div class="hero-divider" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- 4. FEATURES (accordion, 2-column grid) -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-head">
+        <h4 class="kicker">FEATURES</h4>
+        <h2>What Tasmi does</h2>
+      </div>
+      <div class="features-grid">
+        <div class="features-col">
+          <details class="feature-item">
+            <summary>
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="6" fill="currentColor"/></svg>
+              </span>
+              <span class="feature-title">Seven-stage challenges</span>
+              <svg class="feature-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6 L8 11 L13 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="feature-body">
+              <p>A new portion moves through structured stages, from first reading to confident recall. Each stage is short, focused, and self-directed.</p>
+            </div>
+          </details>
+          <details class="feature-item">
+            <summary>
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><rect x="6" y="14" width="36" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 38 L34 38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </span>
+              <span class="feature-title">Synced across devices</span>
+              <svg class="feature-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6 L8 11 L13 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="feature-body">
+              <p>Progress, bookmarks, and streaks follow your Quran Foundation account, so you can pick up where you left off on any device.</p>
+            </div>
+          </details>
+          <details class="feature-item">
+            <summary>
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M16 12 V36 L36 24 Z" fill="currentColor"/></svg>
+              </span>
+              <span class="feature-title">Listen along</span>
+              <svg class="feature-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6 L8 11 L13 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="feature-body">
+              <p>Multi-reciter audio for every verse, with adjustable repeat and pace. Use it as a passive driver or as an active practice partner.</p>
+            </div>
+          </details>
+        </div>
+        <div class="features-col">
+          <details class="feature-item">
+            <summary>
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M8 24 L20 36 L40 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="feature-title">Spaced review</span>
+              <svg class="feature-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6 L8 11 L13 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="feature-body">
+              <p>Once memorized, portions return at increasing intervals so they don&rsquo;t fade. The schedule adapts to how well you recall.</p>
+            </div>
+          </details>
+          <details class="feature-item">
+            <summary>
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M24 4 L42 12 V24 C42 36 24 44 24 44 C24 44 6 36 6 24 V12 Z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+              </span>
+              <span class="feature-title">Private by design</span>
+              <svg class="feature-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6 L8 11 L13 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="feature-body">
+              <p>No audio recording. No advertising identifiers. No third-party analytics. Your memorization is between you and your Lord.</p>
+            </div>
+          </details>
+          <details class="feature-item">
+            <summary>
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 12 V24 L32 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </span>
+              <span class="feature-title">Daily streaks</span>
+              <svg class="feature-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6 L8 11 L13 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="feature-body">
+              <p>A gentle nudge, not a guilt trip. Streaks track your consistency without turning memorization into a game.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. STATS / FOUNDER -->
+  <section class="stats" id="about">
+    <div class="container stats-grid">
+      <div class="founder-card">
+        <blockquote class="founder-quote">
+          &ldquo;We built Tasmi to keep what we&rsquo;d memorized from slipping away. The discipline of tasmi&rsquo;, reciting back what you know, is the thing that made it stick.&rdquo;
+        </blockquote>
+        <div class="founder-meta">
+          <div class="founder-avatar" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="32" fill="#0f6b5c"/><text x="32" y="40" text-anchor="middle" font-family="system-ui" font-size="22" font-weight="600" fill="#fff">ت</text></svg>
+          </div>
+          <div>
+            <strong>A husband-and-wife team</strong>
+            <span class="muted">Co-builders</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-side">
+        <ul class="stats-list">
+          <li>
+            <strong>
+              7
+              <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 V20 M5 13 L12 20 L19 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </strong>
+            <span>Downloads</span>
+          </li>
+          <li>
+            <strong>
+              140
+              <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1.5 12 C4 7 8 4 12 4 C16 4 20 7 22.5 12 C20 17 16 20 12 20 C8 20 4 17 1.5 12 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg>
+            </strong>
+            <span>App Store impressions</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. VOICES -->
+  <section class="voices">
+    <div class="container">
+      <div class="section-head center">
+        <h4 class="kicker">VOICES</h4>
+        <h2>Listen in your reciter&rsquo;s voice</h2>
+        <p class="lead-center muted">Multiple reciters, multiple translations. Choose what helps you hear the verse the way you remember it.</p>
+      </div>
+      <div class="voices-grid">
+        <article class="voice-card">
+          <img class="voice-photo" src="voices/alafasy.jpg" alt="" width="64" height="64" loading="lazy">
+          <div class="voice-meta">
+            <h3>Mishary Alafasy</h3>
+            <p class="muted">Arabic recitation</p>
+            <button type="button" class="voice-play" aria-label="Preview voice">
+              <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 4 L20 12 L7 20 Z" fill="currentColor"/></svg>
+              Preview
+            </button>
+          </div>
+        </article>
+        <article class="voice-card">
+          <img class="voice-photo" src="voices/abdul-basit.jpg" alt="" width="64" height="64" loading="lazy">
+          <div class="voice-meta">
+            <h3>Abdul Basit</h3>
+            <p class="muted">Arabic recitation</p>
+            <button type="button" class="voice-play" aria-label="Preview voice">
+              <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 4 L20 12 L7 20 Z" fill="currentColor"/></svg>
+              Preview
+            </button>
+          </div>
+        </article>
+        <article class="voice-card">
+          <img class="voice-photo" src="voices/al-ghamidi.jpg" alt="" width="64" height="64" loading="lazy">
+          <div class="voice-meta">
+            <h3>Saad Al-Ghamidi</h3>
+            <p class="muted">Arabic recitation</p>
+            <button type="button" class="voice-play" aria-label="Preview voice">
+              <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 4 L20 12 L7 20 Z" fill="currentColor"/></svg>
+              Preview
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PARTNERS / BUILT WITH -->
+  <section class="partners">
+    <div class="container">
+      <h4 class="kicker center">BUILT WITH</h4>
+      <ul class="built-row">
+        <li class="built-item">
+          <img src="built/quran-foundation.png" alt="" width="72" height="72" loading="lazy">
+          <span>Quran Foundation</span>
+        </li>
+        <li class="built-item">
+          <img src="built/swift.png" alt="" width="72" height="72" loading="lazy">
+          <span>Swift</span>
+        </li>
+        <li class="built-item">
+          <img src="built/swiftui.png" alt="" width="72" height="72" loading="lazy">
+          <span>SwiftUI</span>
+        </li>
+        <li class="built-item">
+          <img src="built/testflight.png" alt="" width="72" height="72" loading="lazy">
+          <span>TestFlight</span>
+        </li>
+        <li class="built-item">
+          <img src="built/appstoreconnect.png" alt="" width="72" height="72" loading="lazy">
+          <span>App Store Connect</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 8. TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="testimonials-head">
+        <h4 class="kicker">TESTIMONIALS</h4>
+        <h2>From the first reviewers</h2>
+        <p class="muted">Notes from early TestFlight users during the hackathon period.</p>
+      </div>
+      <div class="testimonials-grid" aria-label="User testimonials">
+        <figure class="testimonial">
+          <blockquote>The seven-stage flow finally made daily review something I look forward to instead of dread.</blockquote>
+          <figcaption><strong>Farah Isnizar</strong><span class="muted">TestFlight beta</span></figcaption>
+        </figure>
+        <figure class="testimonial">
+          <blockquote>It feels quiet. No notifications nagging me. Just the next verse, when I open it.</blockquote>
+          <figcaption><strong>Nadia Assyifa</strong><span class="muted">TestFlight beta</span></figcaption>
+        </figure>
+        <figure class="testimonial">
+          <blockquote>Spaced review actually works. I&rsquo;m still recalling what I memorized at the start of the month.</blockquote>
+          <figcaption><strong>Muhammad Israa</strong><span class="muted">TestFlight beta</span></figcaption>
+        </figure>
+        <figure class="testimonial">
+          <blockquote>The design gets out of the way. It reminds me of a notebook more than an app.</blockquote>
+          <figcaption><strong>Nur Alia</strong><span class="muted">TestFlight beta</span></figcaption>
+        </figure>
+        <figure class="testimonial">
+          <blockquote>Sync with my Quran.com bookmarks is the small touch that made me stay.</blockquote>
+          <figcaption><strong>Kausar</strong><span class="muted">TestFlight beta</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. UPDATES / BLOG -->
+  <section class="updates" id="updates">
+    <div class="container">
+      <div class="section-head center">
+        <h4 class="kicker">UPDATES</h4>
+        <h2>Notes from the journey</h2>
+        <p class="muted">Short writeups on building Tasmi during the hackathon.</p>
+      </div>
+      <div class="updates-grid">
+        <article class="update-card">
+          <div class="update-cover" aria-hidden="true">
+            <img src="logo.png" alt="" width="56" height="56">
+          </div>
+          <h3>Why we chose seven stages</h3>
+          <p class="muted">The shape of a memorization session, and how we settled on a structure that doesn&rsquo;t bore or overwhelm.</p>
+          <span class="update-date muted">Coming soon</span>
+        </article>
+        <article class="update-card">
+          <div class="update-cover" aria-hidden="true">
+            <img src="logo.png" alt="" width="56" height="56">
+          </div>
+          <h3>Building on the Quran Foundation stack</h3>
+          <p class="muted">What it took to integrate auth, bookmarks, and reciter audio in a hackathon timeframe.</p>
+          <span class="update-date muted">Coming soon</span>
+        </article>
+        <article class="update-card">
+          <div class="update-cover" aria-hidden="true">
+            <img src="logo.png" alt="" width="56" height="56">
+          </div>
+          <h3>Work in progress: integrating with Quran MCP via LiteLLM</h3>
+          <p class="muted">Wiring the Quran Foundation MCP server into our agent loop through LiteLLM so memorization help can draw on tafsir, recitations, and translations in one call.</p>
+          <span class="update-date muted">In progress</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FINAL CTA -->
+  <section class="cta-final">
+    <div class="container">
+      <div class="cta-card">
+        <h2>Start your memorization journey</h2>
+        <p>Tasmi is free on the App Store, with no ads and no trackers. Open it on your iPhone, sign in with your Quran Foundation account, and begin your first verse today.</p>
+        <a href="https://apps.apple.com/us/app/tasmi/id6770039955" class="btn btn-store btn-store-light" target="_blank" rel="noopener">
+          <svg class="btn-icon" viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
           <span class="btn-label">
             <span class="btn-small">Download on the</span>
             <span class="btn-big">App Store</span>
           </span>
         </a>
-      </p>
+      </div>
+    </div>
+  </section>
 
-      <h2>How it works</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Seven-stage challenges</h3>
-          <p>A new portion moves through structured stages, from first reading to confident recall.</p>
-        </div>
-        <div class="card">
-          <h3>Spaced review</h3>
-          <p>Once memorized, portions return for review at increasing intervals so they don&rsquo;t fade.</p>
-        </div>
-        <div class="card">
-          <h3>Synced across devices</h3>
-          <p>Your progress, bookmarks, and streaks follow your Quran Foundation account.</p>
-        </div>
-        <div class="card">
-          <h3>Private by design</h3>
-          <p>No audio recording, no ads, no analytics tracking.</p>
+  <!-- 11. FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="" width="40" height="40">
+        <div class="footer-brand-text">
+          <span class="footer-brand-name">Tasmi</span>
+          <span class="footer-copy">&copy; 2026</span>
         </div>
       </div>
+      <div class="footer-cols">
+        <div>
+          <h5>Product</h5>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#updates">Updates</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <ul>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="mailto:israasaifullah@gmail.com">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Project</h5>
+          <ul>
+            <li><a href="https://launch.provisioncapital.com/quran-hackathon" target="_blank" rel="noopener">Quran Foundation Hackathon</a></li>
+            <li><a href="https://apps.apple.com/us/app/tasmi/id6770039955" target="_blank" rel="noopener">App Store listing</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-      <h2>About</h2>
-      <p>Built by a husband-and-wife team for the Quran Foundation Hackathon, Ramadan 2026.</p>
-    </article>
+  <script>
+    // Rotating word in hero ("quiet" -> "consistent" -> "lasting")
+    (function () {
+      var el = document.querySelector('.rotator-word');
+      if (!el) return;
+      var words = ['quiet', 'consistent', 'lasting', 'daily'];
+      var i = 0;
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+      setInterval(function () {
+        i = (i + 1) % words.length;
+        el.classList.add('is-out');
+        setTimeout(function () {
+          el.textContent = words[i];
+          el.classList.remove('is-out');
+        }, 280);
+      }, 2600);
+    })();
 
-    <footer>
-      <span class="copyright">&copy; 2026 Tasmi</span>
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
-      <a href="mailto:israasaifullah@gmail.com">Contact</a>
-    </footer>
-  </main>
+    // Mobile nav toggle
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var menu = document.getElementById('navMenu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function () {
+        var open = menu.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      menu.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          menu.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+
+    // Nav shadow on scroll
+    (function () {
+      var nav = document.getElementById('siteNav');
+      if (!nav) return;
+      var onScroll = function () {
+        if (window.scrollY > 8) nav.classList.add('is-scrolled');
+        else nav.classList.remove('is-scrolled');
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    // Seven-steps interactive carousel
+    (function () {
+      var track = document.querySelector('.step-track');
+      var stage = document.querySelector('.step-stage');
+      if (!track || !stage) return;
+
+      var btns = track.querySelectorAll('.step-btn');
+      var imgs = stage.querySelectorAll('.step-image');
+      var total = btns.length;
+      var current = 0;
+      var userInteracted = false;
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function show(idx) {
+        idx = ((idx % total) + total) % total;
+        var prev = (idx - 1 + total) % total;
+        var next = (idx + 1) % total;
+        btns.forEach(function (b, i) {
+          var on = i === idx;
+          b.classList.toggle('is-active', on);
+          b.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        imgs.forEach(function (img, i) {
+          img.classList.toggle('is-active', i === idx);
+          img.classList.toggle('is-prev',   i === prev);
+          img.classList.toggle('is-next',   i === next);
+        });
+        current = idx;
+      }
+
+      btns.forEach(function (btn, i) {
+        btn.addEventListener('click', function () {
+          userInteracted = true;
+          show(i);
+        });
+      });
+
+      show(0); // initial neighbors
+
+      // Auto-advance until the user clicks
+      if (!prefersReduced) {
+        setInterval(function () {
+          if (userInteracted) return;
+          show(current + 1);
+        }, 3500);
+      }
+    })();
+  </script>
 </body>
 </html>
